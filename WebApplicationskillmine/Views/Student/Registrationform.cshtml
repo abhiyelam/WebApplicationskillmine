@@ -1,0 +1,37 @@
+﻿ 
+@{
+    ViewData["Title"] = "Registrationform";
+}
+
+<h1>Registrationform</h1>
+
+@using(Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>Enter name</th>
+            <td>@Html.TextBox("Name")</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>@Html.RadioButton("Gender","Male")Male
+            @Html.RadioButton("Gender","FeMale")Female
+            </td>
+        </tr>
+            <tr>
+            <th>Enter Mobileno</th>
+                <td>@Html.TextBox("Mobileno")</td>
+            </tr>
+                <tr>
+            <th>Enter email</th>
+                <td>@Html.TextBox("email")</td>
+            </tr>
+        <tr>
+            <th>Enter Percentage</th>
+            <td>@Html.TextBox("percentage")</td>
+        </tr>
+            
+    </table>
+    <input type="submit" value="save"/>
+    <a href="Index">home</a>
+}

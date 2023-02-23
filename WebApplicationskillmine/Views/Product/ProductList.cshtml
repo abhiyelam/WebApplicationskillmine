@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<h1>ProductList</h1>
+<h2>
+    @TempData["message"];
+</h2>
+@if(ViewData["productlist"]!=null)
+{
+    <table class="container table-bordered">
+       <tr>
+           <th>Id</th>
+           <th>Name</th>
+           <th>Price</th>
+       </tr>
+    @foreach (Product p in (IEnumerable<Product>)ViewData["productlist"])
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+        </tr>
+    }
+
+    </table>
+}
+<h3>Productlist using viewbag</h3>
+<table class="container table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (Product p in ViewBag.productlist)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+        </tr>
+    }
+
+</table>

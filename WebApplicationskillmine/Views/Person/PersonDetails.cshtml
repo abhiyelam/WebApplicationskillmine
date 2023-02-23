@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "PersonDetails";
+}
+
+
+@using(Html.BeginForm())
+{
+    <h3>PersonDetails</h3>
+<div class="mb-3">
+    <label>Enter name</label>
+    @Html.TextBox("Name")
+</div>
+<div class="mb-3">
+    <label>phone</label>
+    @Html.TextBox("phone")
+</div>
+<div class="mb-3">
+    <label>Enter Gender</label>
+    <input type="radio" name="Gender" value="Male" />Male
+    <input type="radio" name="Gender" value="Female" />Female
+</div>
+<div class="mb-3">
+    <label> enter hobbies</label>
+    <input type="checkbox" name="hobbies" value="Reading" />Reading
+    <input type="checkbox" name="hobbies" value="Sport" />Sport
+    <input type="checkbox" name="hobbies" value="travel" />Travel
+</div>
+<div class="mb-3">
+    <label>select city</label>
+    @Html.DropDownList("cities")
+</div>
+<div class="mb-3">
+    
+    <input type="submit" valve="Save Form" />
+</div>
+}
